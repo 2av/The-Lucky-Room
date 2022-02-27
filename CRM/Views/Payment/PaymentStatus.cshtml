@@ -1,0 +1,37 @@
+﻿@model CRM.Models.PaytmResponse
+@{
+    ViewBag.Title = "PaymentStatus";
+    Layout = null; //"~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<div class="jumbotron center-align">
+
+    @if (Model.STATUS == "TXN_SUCCESS")
+    {
+        <h2>Payment Status-Success</h2>
+        <table class="table table-bordered">
+            <tr><td>Order Id</td><td>@Model.ORDERID</td></tr>
+            <tr><td>Transaction Amount</td><td>@Model.TXNAMOUNT</td></tr>
+            <tr><td>Transaction ID</td><td>@Model.TXNID</td></tr>
+            <tr><td>Status</td><td>Success</td></tr>
+            <tr><td>Transaction date</td><td>@Model.TXNDATE</td></tr>
+            <tr><td>Payment Mode</td><td>@Model.PAYMENTMODE</td></tr>
+        </table>
+    }
+    else
+    {
+        <h2>Payment Status-Fail</h2>
+        <table class="table table-bordered">
+            <tr><td>Order Id</td><td>@Model.ORDERID</td></tr>
+            <tr><td>Transaction Amount</td><td>@Model.TXNAMOUNT</td></tr>
+            <tr><td>Transaction ID</td><td>@Model.TXNID</td></tr>
+            <tr><td>Status</td><td>Fail</td></tr>
+            <tr><td>Transaction date</td><td>@Model.TXNDATE</td></tr>
+            <tr><td>Payment Mode</td><td>@Model.PAYMENTMODE</td></tr>
+        </table>
+    }
+
+    <div onclick="print();" class="btn btn-primary">Print</div>
+    <a href="~/UserDashboard/PlayGame">Back to Home Page</a>
+    
+</div>

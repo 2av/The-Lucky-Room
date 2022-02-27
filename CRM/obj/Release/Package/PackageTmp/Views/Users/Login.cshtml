@@ -1,0 +1,336 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Login Page/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Login Page/fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/Content/Login Page/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/Login Page/css/main.css">
+    <!--===============================================================================================-->
+    <style>
+        .LoginSuccess {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100" style="margin-top:-100px">
+
+                <div class="login100-form validate-form">
+                    <span class="login100-form-title p-b-48" style="height:260px">
+                        <img src="~/Content/Images/theluckyroom.png" style="width:100%;">
+                    </span>
+                    <p style="text-align:center"><span class="RegistrationMsg"></span></p>
+                    <div class="LoginView">
+                        <div class="wrap-input100 validate-input" data-validate="Enter your user id">
+                            <input class="input100" type="text" name="txtUserId" id="txtUserId" placeholder="User Id">
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter your password">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input100" type="password" name="txtpass" id="txtpass" placeholder="Password">
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn" id="btnLogin">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center p-t-115" style="padding-top:10px">
+                            <span class="txt1">
+                                Don’t have an account?
+                            </span>
+
+                            <a class="txt2" href="#" onclick="showView('RegistrationView', 'LoginView')">
+                                Sign Up
+                            </a>
+                        </div>
+                        <div class="ads">
+                            <script data-ad-client="ca-pub-4492827273600463" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        </div>
+                    </div>
+                    <div class="RegistrationView" style="display:none">
+
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100" type="text" name="username" id="username" onblur="checkUserExists()" placeholder="Enter User Name" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                            <p id="msg" style="color:red"></p>
+                        </div>
+
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100" type="text" name="name" id="name" placeholder="Enter Your Name" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" style="display:none">
+                            <input class="input100" type="text" name="EmailId" id="EmailId" placeholder="Enter Your Email Id" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100 numeric" maxlength="10" type="text" name="MobileNo" id="MobileNo" placeholder="Enter Your 10 digit Mobile No" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100" type="password" name="Password" id="Password" placeholder="Password" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input">
+                            <input class="input100" type="text" name="RefferedBy" id="RefferedBy" placeholder="Reffered By(Optional)" onblur="checkReferalCode()" value="@ViewBag.MyReferalCode" />
+                            <span class="focus-input100" data-placeholder=""></span>
+                            <p id="msgreferal"></p>
+                        </div>
+                       
+                        <div class="wrap-input100 validate-input">
+                            <input class="" type="checkbox" name="chkageconfirm" id="chkageconfirm" />
+                            <span>Accept terms & conditions</span>
+                        </div>
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn" onclick="sentOTP()">
+                                    Register
+                                </button>
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <div class="wrap-input100 validate-input">
+                                <input class="input100" type="text" name="RefferedBy" id="Optno" placeholder="Enter Otp sent on your mobile no" />
+                                <span class="focus-input100" data-placeholder=""></span>
+                                <p id="otpmsg"></p>
+                            </div>
+                            <div class="otpareadetails" style="display:none">
+                                <div class="wrap-input100 validate-input">
+                                    <button class="login100-form-btn" onclick="SaveData()">
+                                        Varify OTP
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center p-t-115" style="padding-top:10px">
+                            <span class="txt1">
+                                Have an Account
+                            </span>
+
+                            <a class="txt2" href="#" onclick="showView('LoginView', 'RegistrationView')">
+                                Login
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+    <script src="~/Content/Login Page/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Content/js/Validation.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".btn-show-pass").click(function () {
+                if ($("#txtpass").attr("type") == "password") {
+                    $("#txtpass").attr("type", "text");
+                }
+                else {
+                    $("#txtpass").attr("type", "password");
+                }
+            });
+            $("#btnLogin").click(function () {
+                $(".RegistrationMsg").html("Please wait, Checking User details");
+                $(".RegistrationMsg").css("color","blue");
+                var UserName = $("#txtUserId").val().trim();
+                var Password = $("#txtpass").val().trim();
+                if (UserName != "" && Password != "") {
+                    var data = {
+                        UserName: UserName,
+                        Password: Password
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/Users/CheckLogin",
+                        data: JSON.stringify(data),
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (data) {
+                            if (data == "Success") {
+                                location.href = "/UserDashboard/PlayGame";
+                            }
+                            else {
+                                //alert(data);
+                                $(".RegistrationMsg").html(data);
+                                $(".RegistrationMsg").css("color", "red");
+                            }
+                        }
+                    });
+                }
+
+            });
+
+            var ref = '@ViewBag.MyReferalCode';
+            if (ref != null && ref != "") {
+                checkReferalCode();
+               // showView('RegistrationView', 'LoginView');
+
+            }
+
+            $("#username").keypress(function (e) {
+                var keyCode = e.keyCode || e.which;
+
+                $("#msg").html("");
+
+                //Regex for Valid Characters i.e. Alphabets and Numbers.
+                var regex = /^[A-Za-z0-9]+$/;
+
+                //Validate TextBox value against the Regex.
+                var isValid = regex.test(String.fromCharCode(keyCode));
+                if (!isValid) {
+                    $("#msg").html("Only Alphabets and Numbers allowed.");
+                }
+
+                return isValid;
+            });
+
+        });
+
+
+        var IsUserExists = false;
+        var IsReferalExists = false;
+        function checkUserExists() {
+            var UserName = $("#username").val().trim();
+            if (UserName != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "/Users/checkUserExists",
+                    data: JSON.stringify({ UserName: UserName }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        $("#msg").html('');
+                        if (data == 'User Available') {
+                            IsUserExists = true;
+                            $("#msg").css("color", "green");
+                        }
+                        else {
+                            $("#msg").html(data);
+                            IsUserExists = false;
+                            $("#msg").css("color", "red");
+                        }
+
+                    }
+                });
+            }
+        }
+        function checkReferalCode() {
+            var RefferedBy = $("#RefferedBy").val().trim();
+            if (RefferedBy != "") {
+                $.ajax({
+                    type: "POST",
+                    url: "/Users/checkReferalCode",
+                    data: JSON.stringify({ RefferedBy: RefferedBy }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        $("#msgreferal").html(data);
+                        if (data == 'Referal Code Not Available') {
+                            IsReferalExists = false;
+                            $("#msgreferal").css("color", "red");
+                        }
+                        else {
+                            IsReferalExists = true;
+                            $("#msgreferal").css("color", "green");
+                        }
+
+                    }
+                });
+            }
+        }
+        function SaveData() {
+            if (IsUserExists) {
+                var UserName = $("#username").val().trim();
+                var FirstName = $("#name").val().trim();
+                var EmailId = $("#EmailId").val().trim();
+                var MobileNo = $("#MobileNo").val().trim();
+                var Password = $("#Password").val().trim();
+                var RefferedBy = $("#RefferedBy").val().trim();
+                if (IsReferalExists == false) {
+                    RefferedBy = '';
+                }
+               /* if (!ValidateEmail(EmailId)) {
+                    alert("Invalid Email Id");
+                    return;
+                }*/
+                if (UserName != "" && FirstName != "" && MobileNo != "" && Password != '') {
+                    if ($("#chkageconfirm").is(":checked") == true) {
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/Users/SaveData",
+                            data: JSON.stringify({ UserName: UserName, FirstName: FirstName, EmailId: EmailId, Password: Password, RefferedBy: RefferedBy, MobileNo: MobileNo }),
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (data) {
+                                alert(data);
+                                showView('LoginView', 'RegistrationView');
+                                $(".RegistrationMsg").html(data);
+                            }
+                        });
+                    }
+                    else{
+                        alert("Please select Term & conditions");
+                    }
+
+                }
+            }
+            else {
+                alert("User not Exists");
+            }
+        }
+        function sentOTP() {
+            var mobileno = $("#MobileNo").val();
+            $.ajax({
+                type: "POST",
+                url: "/Users/SendSMS",
+                data: JSON.stringify({ mobileno: mobileno }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                     
+                    alert(data);
+                }
+            });
+        }
+            function showView(s, h) {
+                $("." + s).show();
+                $("." + h).hide();
+            }
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,1047 @@
+﻿@font-face {
+    font-family: myFirstFont;
+    src: url(../Fonts/LinguisticsPro-Regular.otf);
+}
+
+.GameArea {
+    background-image: url(../Images/UI/background.jpg);
+    background-size: 133% 114%;
+    margin: 0 auto;
+    max-width: 425px;
+    height: 99.6vh;
+    background-position: 51%;
+    position: relative;
+    font-family: myFirstFont;
+}
+
+    .GameArea .myprofile {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        border: 4px solid #3a0a0a;
+        background-color: #3a0a0a;
+        left: 21px;
+        top: 5px;
+        padding: 0px;
+    }
+
+        .GameArea .myprofile img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .GameArea .myprofile .MyReferelcode {
+            font-size: 1rem;
+            font-weight: 600;
+            color: beige;
+            /*background-image: url(../Images/UI/yellowline.png);*/
+        }
+
+.profileupdate .contentsArea .myphoto {
+    width: 125px;
+    height: 125px;
+    border-radius: 98px;
+    border: 2px solid #8c4e02;
+    background-color: transparent;
+    left: 21px;
+    top: 5px;
+    padding: 0px;
+    margin-bottom: 1rem;
+}
+
+.default-img-list {
+    margin: 5px;
+    display: none;
+}
+
+    .default-img-list img {
+        width: 50px;
+        height: 50px;
+        border: 1px solid solid;
+        margin: 1px;
+        border-radius: 50%;
+    }
+
+.popup-box {
+    height: 72vh;
+    background-image: url(../Images/UI/bg1.png);
+    position: absolute;
+    z-index: 9;
+    top: 120px;
+    width: 89%;
+    left: 5%;
+    background-size: 104% 107%;
+    background-position: 30% 36%;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+    .popup-box .contentsArea {
+        width: 100%;
+        height: 67vh;
+        overflow: auto;
+    }
+
+.Add-Wallet .contentsArea .amountlist {
+    width: 100%;
+}
+
+    .Add-Wallet .contentsArea .amountlist .btnAmount {
+        text-align: center;
+        line-height: 1rem;
+        padding: 10px;
+        width: 24.4%;
+        float: left;
+        border: 1px solid #bf660b;
+        margin: 1px;
+        border-radius: 4PX;
+        margin-top: 4PX;
+        color: #3a0a0a;
+        font-weight: 600;
+    }
+
+.GameArea .profileupdate {
+}
+
+.GameArea .points {
+    position: absolute;
+    border: 0px solid gray;
+    left: 30%;
+    width: 43%;
+    color: white;
+}
+
+    .GameArea .points .img {
+        width: 21px;
+        height: 21px;
+        border-radius: 25%;
+        transform: scale(1.8);
+        margin-top: -5px;
+        margin-left: 6px;
+    }
+
+    .GameArea .points div {
+        width: 100%;
+        border: 3px solid #3a0a0a;
+        border-radius: 20px;
+        margin-bottom: 3px;
+        margin-top: 6px;
+    }
+
+        .GameArea .points div span {
+            margin-left: 3px;
+            font-size: 1.2rem;
+            color: #f8e3b8;
+            font-weight: 600;
+        }
+
+.GameArea .first-top-table {
+    width: 89%;
+    position: absolute;
+    top: 79px;
+    left: 5%;
+}
+
+.GameArea .mybtn {
+    background-image: url(../../Content/Images/UI/btn.png);
+    background-size: 101% 109%;
+    height: 34px;
+    text-align: CENTER;
+    font-size: 1.4rem;
+    background-position: 100%;
+    color: #fefa94;
+    border-radius: 5.7px;
+    line-height: 3rem;
+    font-weight: 600;
+}
+
+
+.GameArea .PlayArea {
+    position: absolute;
+    top: 114px;
+    left: 6%;
+    width: 87%;
+    height: 71vh;
+    border: 0px solid gray;
+    overflow: auto;
+}
+
+    .GameArea .PlayArea .playAreaSection {
+        width: 100%;
+        padding: 10px;
+        position: absolute;
+        display: none;
+    }
+
+.TopHeaderTitle {
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    margin-bottom: 2px;
+    background-color: #f2ac09;
+    font-size: 1.5rem;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+}
+
+.GameArea .PlayArea .playAreaSection .contentsArea {
+    width: 100%;
+    height: 61vh;
+    overflow: auto;
+}
+
+.myroomarea {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px gray solid;
+    text-align: center;
+    min-height: 267px;
+    background-image: url(../Images/UI/roombg2.jpg);
+    position: relative;
+    border-radius: 5px;
+    background-size: 155% 105%;
+    background-position: 34% -204%;
+}
+
+
+
+    .myroomarea .Title-line {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #fcff55;
+        text-indent: 3px;
+    }
+
+    .myroomarea .EntryFees {
+        position: absolute;
+        color: #fcff55;
+        right: 0px;
+        display: block;
+        border-radius: 7px;
+        top: 0px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        padding: -1.8rem;
+        min-width: 101px;
+    }
+
+        .myroomarea .EntryFees .EntryFees_img {
+            width: 2rem;
+            transform: scale(1.5);
+        }
+
+    .myroomarea .playbtn .description {
+        margin-top: 0rem;
+        font-size: 1.5rem;
+        color: lime;
+    }
+
+.pendingmembers {
+    color: lightyellow;
+    font-size: 1.2rem;
+}
+
+.myroomarea .joinedRoomRefresh {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 0px;
+    position: absolute;
+    display: none;
+}
+
+.amountdetails {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.blinking {
+    animation: blinkingText 3s infinite;
+    font-size: 1rem;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: #fcff55;
+    }
+
+    49% {
+        color: #fcff55;
+    }
+
+    60% {
+        color: white;
+    }
+
+    99% {
+        color: white;
+    }
+
+    100% {
+        color: #fcff55;
+    }
+}
+
+.playbtn .btnloader-main {
+    position: absolute;
+    width: 95%;
+    height: 81%;
+    z-index: 10;
+    border-radius: 10px;
+    opacity: 0.1;
+    background-color: red;
+}
+
+.btnloader-main .btnloader {
+    font-size: 20px;
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 30px auto;
+    border-radius: .5em;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.075), 0 0 0 0.25em rgba(0,0,0,0.1), inset 0 0.1em 0.05em rgba(0,0,0,0.1), 0 0.05em rgba(255,255,255,0.7);
+    display: none;
+}
+
+.btnloader .bar {
+    /* Size and position */
+    font-size: 20px; /* 1em */
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 100px auto;
+    /* Styles */
+    border-radius: .5em; /* Height/2 */
+    background: white; /* Fallback */
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 .05em rgba(100,100,100,0.075), /* Subtle border */
+    0 0 0 .25em rgba(0,0,0,0.1), /* Outter border */
+    inset 0 .1em .05em rgba(0,0,0,0.1), /* Inset shadow */
+    0 .05em rgba(255,255,255,0.7); /* Slight reflection */
+}
+
+.btnloader:after {
+    /* Content and position */
+    content: "Please wait.";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+    /* Font styles */
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 1em;
+    color: #555;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+}
+
+.btnloader .sphere {
+    /* Size */
+    display: block;
+    width: 1em;
+    height: 100%;
+    /* Styles */
+    border-radius: 50%;
+    background: linear-gradient(#eee, #ddd);
+    box-shadow: inset 0 .15em .1em rgba(255,255,255,0.3), /* Top light */
+    inset 0 -.1em .15em rgba(0,0,0,0.15), /* Bottom shadow */
+    0 0 .25em rgba(0,0,0,0.3); /* Outter shadow */
+    /* Animation */
+    animation: move 1.75s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+    to {
+        margin-left: 90%;
+    }
+}
+
+.tblrounds {
+    margin-top: 1rem;
+}
+
+    .tblrounds, .tblrounds thead, .tblrounds td {
+        color: black;
+    }
+
+        .tblrounds thead tr th {
+            text-align: center;
+            padding: 0.4rem;
+        }
+
+.luckbtn {
+    margin: 1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: 150% 150%;
+    background-position: 51% 47%;
+    background-color: #6b3333;
+    box-shadow: inset 0px -5px 5px 1px #472e00;
+    border: 0px;
+}
+
+.roatenumber {
+    -webkit-animation: rotation 0.1s infinite linear !important;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.luckybtn_1 {
+    background-image: url(../Images/Number/1.png);
+}
+
+.luckybtn_2 {
+    background-image: url(../Images/Number/2.png);
+}
+
+.luckybtn_3 {
+    background-image: url(../Images/Number/3.png);
+}
+
+.luckybtn_4 {
+    background-image: url(../Images/Number/4.png);
+}
+
+.luckybtn_5 {
+    background-image: url(../Images/Number/5.png);
+}
+
+.luckybtn_6 {
+    background-image: url(../Images/Number/6.png);
+}
+
+.luckybtn_7 {
+    background-image: url(../Images/Number/7.png);
+}
+
+.luckybtn_8 {
+    background-image: url(../Images/Number/8.png);
+    background-size: 175% 152% !important;
+}
+
+.luckybtn_9 {
+    background-image: url(../Images/Number/9.png);
+}
+
+.luckybtn_10 {
+    background-image: url(../Images/Number/10.png);
+    background-size: 148% 142% !important;
+    background-position: 359% 45% !important;
+}
+
+.totalpointsarea {
+    position: absolute;
+    font-size: 1rem;
+    top: 0;
+    left: 7px;
+    background-color: #aae4fe;
+    text-indent: 1px;
+    color: #151919;
+    padding: 2px 7px 2px !important;
+}
+
+.mycurrentscore {
+    margin: 1px;
+    border: 1px solid black;
+    padding: 5px;
+    background-color: gold;
+    color: #303F9F;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.popup-area {
+    position: absolute;
+    background-image: url(../Images/UI/messagebg.png);
+    width: 89%;
+    min-height: 350px;
+    left: 5%;
+    top: -100%;
+    background-size: 162% 88%;
+    z-index: 10;
+    background-position: 55% 5%;
+    padding-top: 9rem;
+    text-align: center;
+    transition: 0.3s all;
+}
+
+.msg-contents {
+    min-height: 80px;
+    font-size: 1.5rem;
+}
+
+.btnok {
+    background-image: url(../Images/UI/btnokbg.png);
+    width: 30%;
+    height: 4rem;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+    margin: 0 auto;
+    line-height: 4rem;
+}
+
+
+.NewRoom .Rooms {
+    height: 175px;
+    background-image: url(../Images/UI/roombg2.jpg);
+    background-position: 60%;
+    width: 100%;
+    margin-bottom: 13px;
+    border-radius: 5px;
+    position: relative;
+    color: #300101;
+}
+
+.NewRoom .RoomName .Title-line {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fcff55;
+    text-indent: 3px;
+}
+
+.NewRoom .Rooms .Roomno {
+    position: absolute;
+    color: #300101;
+    left: 46%;
+    border: 0px double black;
+    display: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 0px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    transform: scale(1.5);
+}
+
+.NewRoom .Rooms .EntryFees {
+    position: absolute;
+    color: #fcff55;
+    right: 0px;
+    display: block;
+    border-radius: 7px;
+    top: 0px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    padding: -1.8rem;
+    min-width: 101px;
+}
+
+    .NewRoom .Rooms .EntryFees .Title-line {
+        background-image: url(../Images/UI/titlebg.png);
+        background-size: 100% 100%;
+        width: 100%;
+        color: black;
+        font-size: 1.2rem;
+        line-height: 3rem;
+        margin-bottom: -9px;
+    }
+
+    .NewRoom .Rooms .EntryFees .EntryFees_img {
+        width: 2rem;
+        transform: scale(1.5);
+    }
+
+.NewRoom .Rooms .btnJoinRoom {
+    background-image: url(../Images/UI/btnJoinRoom.png);
+    width: 50%;
+    height: 50px;
+    background-size: 100% 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.7rem;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    font-weight: 600;
+}
+
+.NewRoom .Rooms .myprogress {
+    position: absolute;
+    width: 100%;
+    top: 7%;
+}
+
+.NewRoom .Rooms .winningprice {
+    position: absolute;
+    top: 38%;
+    text-align: center !important;
+    width: 100%;
+    color: #300101;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+
+    .NewRoom .Rooms .winningprice span {
+        border-radius: 20px;
+        background: #432525;
+        font-size: 10px;
+        font-weight: 600;
+        border: 2px solid #271212;
+        padding: 0.6rem;
+        color: WHITE;
+        margin-right: 1rem;
+    }
+
+    .NewRoom .Rooms .winningprice .winp-sr {
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid white;
+        color: black;
+    }
+
+.progress-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #280707;
+    text-transform: capitalize;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 30px 0px auto;
+}
+
+.progress {
+    height: 5px;
+    background: #e9e9ea;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    overflow: visible;
+    position: relative;
+}
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .progress:after {
+        border: 7px solid #e9e9ea;
+        left: auto;
+        right: 0;
+    }
+
+    .progress .progress-bar {
+        box-shadow: none;
+        border: none;
+        border-radius: 15px;
+        position: relative;
+        -webkit-animation: animate-positive 1s;
+        animation: animate-positive 1s;
+    }
+
+    .progress .progress-value {
+        width: 70px;
+        height: 30px;
+        line-height: 22px;
+        border-radius: 20px;
+        background: #271212;
+        font-size: 10px;
+        font-weight: 600;
+        position: absolute;
+        top: -12px;
+        right: 0;
+        z-index: 2;
+        display: none;
+    }
+
+    .progress.orange:before {
+        border: 7px solid #300101;
+    }
+
+    .progress.blue:before {
+        border: 7px solid #1a4966;
+    }
+
+    .progress.green:before {
+        border: 7px solid #53aa2c;
+    }
+
+    .progress.purple:before {
+        border: 7px solid #66406f;
+    }
+
+    .progress.orange .progress-value {
+        border: 5px solid #000000;
+        color: #ffffff;
+    }
+
+    .progress.blue .progress-value {
+        border: 5px solid #1a4966;
+        color: #1a4966;
+    }
+
+    .progress.green .progress-value {
+        border: 5px solid #53aa2c;
+        color: #53aa2c;
+    }
+
+    .progress.purple .progress-value {
+        border: 5px solid #66406f;
+        color: #66406f;
+    }
+
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+.GameArea .settings {
+    width: 7rem;
+    height: 3rem;
+    position: absolute;
+    top: 0px;
+    right: 0rem;
+    text-align: center;
+    font-size: 2.2rem;
+    color: #3a0a0a;
+    /* transform: scale(1.2); */
+    background-color: #f4bf43;
+    border-bottom-left-radius: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+}
+
+.GameArea .share {
+    top: 44px;
+    border-top: 2px solid;
+    border-top-left-radius: 1rem;
+    font-size: 2rem;
+}
+
+.share-btn-area {
+    text-align: center;
+    margin-top:3rem;
+}
+
+.share-btn {
+    border: 0.2rem dashed #3a0a0a;
+    width: 80%;
+    padding: 0.6rem;
+    font-size: 2.5rem;
+    color: #67039a;
+    margin: 0 auto;
+}
+.share-tips{
+    text-align: left;
+    border-left: 0.5rem solid;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.RefreshData {
+    background-image: url(../Images/UI/refresh.jpg);
+    background-size: 108% 103%;
+    color: white;
+    background-position: 44% 26%;
+    display: block;
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 50%;
+    line-height: 3.5rem;
+    margin: 0 auto;
+    box-shadow: inset 1px 0px 9px 0px #9c1000;
+}
+
+.RefreshActive {
+    -webkit-animation: RefreshActive 1s infinite linear !important;
+}
+
+@-webkit-keyframes RefreshActive {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+.GameArea .bottom-menu {
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    text-align: center;
+    font-size: 2rem;
+    color: #09131f;
+}
+
+    .GameArea .bottom-menu .Notification {
+        position: relative;
+    }
+
+        .GameArea .bottom-menu .Notification .count {
+            position: absolute;
+            color: white;
+            top: -1px;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+.GameArea .Bottom-menu-contents {
+    position: absolute;
+    bottom: 5.5vh;
+    width: 89%;
+    height: 70vh;
+    z-index: 1;
+    background-color: white;
+    transition: 1s all;
+    display: none;
+    left: 5%;
+}
+
+.h4-txt {
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.h4-txt1 {
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.h4-txt2 {
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.GameArea .Bottom-menu-contents-Show {
+    display: block;
+}
+
+.GameArea .Bottom-menu-contents .bottom-title {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    background-color: #f4bf43;
+    border-top: 2px solid #49190f;
+}
+
+.GameArea .Bottom-menu-contents .bottom-close {
+    position: absolute;
+    right: 0;
+    color: red;
+    font-size: 2rem;
+}
+
+.GameArea .Bottom-menu-contents .bottom-Contents-Area {
+    position: absolute;
+    height: 66vh;
+    overflow: auto;
+    top: 2.5rem;
+    width: 100%;
+}
+
+
+    .GameArea .Bottom-menu-contents .bottom-Contents-Area .OnlineUsers .tblonlineuser {
+        width: 100%;
+        height: 65vh;
+    }
+
+.img-addwallet {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-top: 0px;
+    float: right;
+    margin-right: 3px;
+    margin-top: -1px;
+}
+
+.img-Withdrwal {
+    width: 2rem;
+    height: 2rem;
+    float: right;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid #3a0a0a;
+}
+
+.txtWithdrawlAmount {
+    width: 100px;
+    text-align: center;
+    border: 2px solid #c0defa;
+    border-radius: 15px;
+    display: block;
+    margin: 4px auto;
+}
+
+.onlineuser-list {
+    width: 100%;
+    height: 62.1vh;
+    overflow: auto;
+    background-color: #d6d6d6;
+}
+
+    .onlineuser-list .online-users {
+        margin-bottom: 1px;
+        background-color: #987c3a;
+        border-radius: 0px;
+        color: white;
+        margin: 0px 0px 3px 0px;
+    }
+
+.img-profileicon {
+    width: 25px;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 26px;
+    padding: 0.2rem;
+}
+
+.emozi-head {
+    width: 100%;
+    overflow: auto;
+    height: 17.6vh;
+    display: none;
+}
+
+    .emozi-head .emoji {
+        font-size: 2rem;
+    }
+
+.amount-selected {
+    margin: 35px auto;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: green;
+}
+
+.btn-close {
+    width: 37%;
+    margin: 0 auto;
+    height: 40px;
+    border: 2px solid #3a0a0a;
+    line-height: 3.5rem;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    background-color: #f4bf43;
+    color: red;
+}
+
+.lblAmountToAdd {
+}
+
+.ulNotification li .Descriptions {
+    font-size: 1.3rem;
+}
+
+.ulNotification .Error {
+    color: red;
+}
+
+.ulNotification .Normal {
+    color: #3a0a0a;
+}
+
+.ulNotification li .date-time {
+    font-size: 1rem;
+    color: brown;
+    font-weight: bold;
+}
+
+.min-msg {
+    font-size: 1rem;
+    color: black;
+}
+
+.tabWithdrawStatus {
+    background-color: white;
+}
+
+input[type=checkbox] + label {
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+    font-size: 0.7em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+    input[type=checkbox] + label:before {
+        content: "\2714";
+        border: 0.1em solid #000;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        padding-left: 0.2em;
+        padding-bottom: 0.3em;
+        margin-right: 0.2em;
+        vertical-align: bottom;
+        color: transparent;
+        transition: .2s;
+        line-height: 1;
+    }
+
+    input[type=checkbox] + label:active:before {
+        transform: scale(0);
+    }
+
+    input[type=checkbox]:checked + label:before {
+        background-color: #f4bf43;
+        border-color: #f4bf43;
+        color: #fff;
+    }
+
+    input[type=checkbox]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+    }
+
+    input[type=checkbox]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #bfb;
+        border-color: #bfb;
+    }
+
+.filter {
+    display: -webkit-inline-box;
+}

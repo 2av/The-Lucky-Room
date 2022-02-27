@@ -1,0 +1,566 @@
+﻿@model CRM.Models.PaytmRequest
+@{
+    ViewBag.Title = "THE LUCKY ROOM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string Username = CRM.Models.GlobalFunctions.GetCookies("UserName");
+}
+<head>
+    <script>
+        username = '@Username';
+        $(document).ready(function () {
+
+            $(".btnRoomJoined").click(function () {
+                var RoomsId = $(this).attr("data-roomsid");
+                RoomJoined(RoomsId);
+            });
+
+            function toggleIcon(e) {
+                $(e.target)
+                    .prev('.panel-heading')
+                    .find(".more-less")
+                    .toggleClass('glyphicon-plus glyphicon-minus');
+            }
+            $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+            $('.panel-group').on('shown.bs.collapse', toggleIcon);
+
+            $(".btnAddAmount").click(function () {
+                $("#Amount").val($(this).attr("data-amount"));
+                $("#lblAmountToAdd").html("Rs. " + $(this).attr("data-amount"));
+            })
+            setInterval(function () {
+                LoadData();
+            }, 3000 * 60);
+            LoadData();
+
+
+            $('.popupCloseButton').click(function () {
+                $('.hover_bkgr_fricc').hide();
+            });
+
+        });
+        $('#btnUpload').click(function () {
+
+            // Checking whether FormData is available in browser
+            if (window.FormData !== undefined) {
+
+                var fileUpload = $("#FileUpload1").get(0);
+                var files = fileUpload.files;
+
+                // Create FormData object
+                var fileData = new FormData();
+
+                // Looping over all files and add it to FormData object
+                for (var i = 0; i < files.length; i++) {
+                    fileData.append(files[i].name, files[i]);
+                }
+
+                // Adding one more key to FormData object
+                fileData.append('username', 'priyanka');
+
+                $.ajax({
+                    url: '/Employee/UploadFiles',
+                    type: "POST",
+                    contentType: false, // Not to set any content header
+                    processData: false, // Not to process data
+                    data: fileData,
+                    success: function (result) {
+                        console.log(result);
+
+                        if (result.split('|').length > 1) {
+                            var img = result.split('|')[1];
+                            result = result.split('|')[0];
+                            $("#ProfileImage").val(img);
+                            $("#profileimg").attr("src", "/Uploads/" + img);
+                        }
+                        else {
+                            $("#profileimg").attr("src", "/Content/Images/Icard/default.png");
+                        }
+
+                        alert(result);
+                    },
+                    error: function (err) {
+                        alert(err.statusText);
+                    }
+                });
+            } else {
+                alert("FormData is not supported.");
+            }
+        });
+
+
+
+    </script>
+</head>
+<div class="container">
+    <div id="exTab1">
+        <div class="toparea">
+            <ul class="nav nav-pills text-center" style="display: flex;justify-content: center;">
+
+                <li onclick="MyRoomsJoined()" class="active menu-tab">
+                    <a href="#2a" data-toggle="tab">My Room</a>
+                </li>
+                <li onclick="RoomJoinedStatus()" class="menu-tab">
+                    <a href="#1a" data-toggle="tab">New Room</a>
+                </li>
+                <li onclick="RoomResult()" class="menu-tab">
+                    <a href="#3a" data-toggle="tab">History</a>
+                </li>
+                <li class="menu-tab">
+                    <a href="#4a" data-toggle="tab">Withdraw</a>
+                </li>
+            </ul>
+        </div>
+        <img src="" />
+        <div>
+            <div class="tab-content clearfix" style="margin-top:50px;left:0;width:100%">
+                <div class="tab-pane active" id="2a">
+                    <div class="row div-myroom" style="display:none">
+
+                    </div>
+                    <div class="blank-room" style="display:none">
+                        <h4 class="h4-txt">CURRENTLY YOU HAVE NOT JOINED ANY ROOM</h4>
+                        <h4 class="h4-txt1">Click above on New Room to join a room </h4>
+                        <hr style="border-top: 1px solid #847070;" />
+                        <div style="font-size:1.7rem">
+                            <h4 class="h4-txt2">How to play</h4>
+                            <ul style="color: #390084; font-weight:500;text-align: justify;list-style: none;padding:0px">
+                                <li><b>Step 1:</b> Go to <span class="badge">New Room </span> section</li>
+                                <li><b>Step 2:</b> <span class="badge">Join Room </span> To join room, click on join room button of any room which you want to play</li>
+                                <li><b>Step 3:</b>After joining the room ,My room section will be open. In this section you have to choose your lucky no. 5 times.</li>
+                                <li>
+                                    <b>Step 4:</b> <span class="badge">How Points Collect</span><br /> After choosing your lucky no. system also select number through background process and populate as system lucky no.
+                                    <br />
+                                    You can gain more points based on how much your selected lucky no is nearest to the system lucky no.<br />
+                                    Ex.
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Round</th>
+                                                <th>Your Number</th>
+                                                <th> System Number</th>
+                                                <th>Points Collect</th>
+                                            </tr>
+                                        </thead>
+                                        <tr>
+                                            <td>1.</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2.</td>
+                                            <td>3</td>
+                                            <td>6</td>
+                                            <td>700</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3.</td>
+                                            <td>1</td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4.</td>
+                                            <td>8</td>
+                                            <td>8</td>
+                                            <td>1000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5.</td>
+                                            <td>10</td>
+                                            <td>1</td>
+                                            <td>100</td>
+                                        </tr>
+                                    </table>
+                                </li>
+                                <li>
+                                    <b>Step 5:</b> <span class="badge">Winner Decide</span> Joined member who will collect the highest points ,they will be winner of this game.
+                                    And the winning amount will be added in your wallet.
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="1a">
+                    <div class="TopHeaderTitle">Room Available For You</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="filter">
+                                @foreach (var obj in ViewBag.MembersList)
+                                {
+                                    <input type="checkbox" id="chk_@obj" class="membersfilter" data-value="@obj" onchange="RoomFilter('Member')" />
+                                    <label for="chk_@obj">@obj M</label>
+                                }
+                            </div>
+                            <div class="filter">
+                                <input type="checkbox" id="chkRunningGame" class="chkRunningGame" onchange="RoomFilter('RunningGame')" />
+                                <label for="chkRunningGame">Running Game</label>
+                            </div>
+                            <div class="badge" style="display:none">
+                                <span>Entry Price:<br /></span>
+
+                                @foreach (var obj in ViewBag.EntryPriceList)
+                                {
+                                    <input type="checkbox" class="entrypricefilter" id="chkrs_@obj" data-value="@obj" onchange="RoomFilter()" />
+                                     <label for="chkrs_@obj">Rs.</label>
+                                }
+
+                            </div>
+                            @if (CRM.Models.GlobalFunctions.GetCookies("UserName").ToLower() == "admin")
+                            {
+                                <label class="badge totalPlaycountToday"></label>
+                            }
+                        </div>
+                    </div>
+                    <div class="row">
+                        @{ int count = 0;}
+                        @foreach (var obj in ViewBag.Rooms)
+                        {
+                            count++;
+                            <div class="col-sm-12 Rooms-Area" data-membersNo="@obj.MembersNo" data-price="@obj.EntryPrice">
+                                <div class="RoomsArea" data-roomsid="@obj.ID">
+                                    <div class="top" style="text-align:center">
+                                        <label class="label">@obj.RoomName</label>
+                                        <label class="label">Entry Price:Rs. @obj.EntryPrice</label>
+                                        @*@if (CRM.Models.GlobalFunctions.GetCookies("UserName").ToLower() == "admin")
+                                        { 
+                                        <label class="TodayPlayCount Roomcount label">Today 0 Round Play</label>
+                                        <label class="TotalPlayCount Roomcount label">Total 0 Round Play</label>
+                                        }
+                                        else
+                                        {
+                                            <label class="TodayPlayCount Roomcount label">Today 0 Round Play</label>
+                                        }*@
+
+                                        <div class="RoomGeneratedDateTime label " style="float:right;font-size:8px; border:0"></div>
+                                    </div>
+                                    <div class="progress" data-roomsid="@obj.ID">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="@obj.MembersNo" style="width:0%">
+                                            Members Joined 0/0
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="membesrjoined badge badge-info" style="background-color:orangered">Members Joined 0/@obj.MembersNo</label>
+                                        <label class="youhavealreadyjoin badge" style="display:none;background-color:green;color:white">YOU ALREADY JOINED</label>
+                                        <div class="btn btn-sm btn-success btnRoomJoined" style="background-color:forestgreen" data-roomsid="@obj.ID">Join Room</div>
+                                        @{
+                                            string perc = ((obj.FirstPrice / obj.EntryPrice) * 100).ToString("#.##");
+                                        }
+                                        <label style="color:#00d110"><span style="font-weight:bold;font-size:2.5rem">@perc%</span> Return first price</label>
+                                        <label class="badge" style="font-size: 2rem;float: right;background-color: darkorange;">
+                                            @count <p style="font-size:1rem">Room No</p>
+                                        </label>
+                                    </div>
+                                    <div class="description">
+                                        <span class="label">Win Price</span>
+                                        @{
+                                            int pricecount = 0;
+                                        }
+                                        @if (obj.FirstPrice > 0)
+                                        {
+                                            pricecount++;
+                                            <label class="badge">@pricecount . Rs. @obj.FirstPrice</label>
+                                        }
+                                        @if (obj.SecondPrice > 0)
+                                        {
+                                            pricecount++;
+                                            <label class="badge">@pricecount . Rs. @obj.SecondPrice</label>
+                                        }
+                                        @if (obj.ThirdPrice > 0)
+                                        {
+                                            pricecount++;
+                                            <label class="badge">@pricecount . Rs. @obj.ThirdPrice</label>
+                                        }
+                                        @if (obj.FourthPrice > 0)
+                                        {
+                                            pricecount++;
+                                            <label class="badge">@pricecount . Rs. @obj.FourthPrice</label>
+                                        }
+                                        @if (obj.FifthPrice > 0)
+                                        {
+                                            pricecount++;
+                                            <label class="badge">@pricecount . Rs. @obj.FifthPrice</label>
+                                        }
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="tab-pane history" id="3a">
+                    <div class="TopHeaderTitle">
+                        Your Completed Room History
+                        <p style="text-align:center;font-size:10px;color:darkslategray">History Showing From @DateTime.Now.AddDays(-1).ToLongDateString()</p>
+                    </div>
+                    <table class="table table-bordered table-responsive" style="width:100%; font-size:1.2rem" id="table-history">
+
+                        <thead>
+                            <tr>
+                                <th>Room</th>
+                                <th>User</th>
+                                <th>Point</th>
+                                <th>Rank</th>
+                                <th>Return Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="_history"></div>
+                </div>
+                <div id="4a" class="tab-pane withdraw">
+                    <div class="TopHeaderTitle">Withdraw Request</div>
+                    <div class="WithdrawRequestAmt">
+                        <table>
+                            <tr>
+                                <td><lable>Enter Amount:</lable></td>
+                                <td><input type="text" id="txtWithdrawRequestAmt" value="0" style="width:100px; text-align:center;border: 2px solid #c0defa;border-radius: 15px;" /></td>
+
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td colspan="2"><lable>Amount Withdrawal in:</lable></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p style="margin-left: 10px;">
+                                        &raquo; <input type="radio" id="rdbGooglepay" name="Paymentin" value="Google Pay" checked="checked" /> In Gpay(Google Pay)<br>
+                                        &raquo; <input type="radio" id="rdbPhonePay" name="Paymentin" value="Phone Pe" /> In Phone Pe <br>
+                                        &raquo; <input type="radio" id="rdbAccount" name="Paymentin" value="Account" /> In Account
+                                    </p>
+                                    <!--
+                                    <ul>
+                                        <li><input type="radio" id="rdbGooglepay" name="Paymentin" value="Google Pay" checked="checked" />In Gpay(Google Pay)</li>
+                                        <li><input type="radio" id="rdbPhonePay" name="Paymentin" value="Phone Pe" />in Phone Pe</li>
+                                        <li><input type="radio" id="rdbAccount" name="Paymentin" value="Account" />In Account below mention</li>
+                                    </ul>
+                                    -->
+                                    <div class="btn btn-success btn-withdraw-request" onclick="WithdrawlRequest()">Withdraw Request</div>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <hr />
+                    <div class="withdrawrequest">
+                        <hr />
+                        <div>
+                            <div class="TopHeaderTitle">Withdraw Status </div>
+                            <div class="withdraw-history">
+                                <div class="btn btn-sm btn-primary btn-withdraw-request" onclick="WithdrawlRequestStatus()">Show My History</div>
+                                <div class="tabWithdrawStatus-recordnotfound" style="display:none">Record not Found</div>
+                                <table class="table table-bordered table-responsive tabWithdrawStatus" style="display:none; width:100%; font-size:1.2rem">
+                                    <thead>
+                                        <tr>
+                                            <th>Sr.</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Comments</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="transaction">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class=""><h3 class="accountbalance"></h3></div>
+                            <div class="AddMoneyArea">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @using (Html.BeginForm("Index", "Payment", FormMethod.Post))
+                                        {
+                                            @Html.HiddenFor(x => x.Amount)
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div><label>Select the amount to be add in wallet:</label></div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="25.0">Rs.25</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="50.0">Rs.50</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="100.0">Rs.100</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="250.0">Rs.250</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="500.0">Rs.500</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="1000.0">Rs.1000</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="2000.0">Rs.2000</div>
+                                                    <div class="btn btn-success btn-sm btnAddAmount" data-amount="5000.0">Rs.5000</div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <hr />
+                                                    <label>Amount Selected: </label><label id="lblAmountToAdd" class="badge">Rs. @Model.Amount</label>
+                                                    <label class="btn btn-primary btnAddAmount" data-amount="50">Reset</label><br />
+                                                    <input type="submit" class="btn btn-success btnpaymentapply" value="Payment" onclick="return validatePayment();" />
+                                                </div>
+                                            </div>
+
+
+                                        }
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <h3>Payment Option available</h3>
+                                        <ul>
+                                            <li>Paytm Wallet</li>
+                                            <li>BHIM UPI</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="display:none">
+                            <hr />
+                            Your Current ♥ life line: 50
+                            <div class="btn btn-warning">Add ♥</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Notificationdetails" class="tab-pane">
+
+                </div>
+                <div id="Howtouse" class="tab-pane">
+                    @*<div class="row">
+                            <div class="col-md-12 howtoplay">
+                                <b>Step 1> New Rooms: </b>
+                                <span>Go to <b class="badge">New Rooms</b> Section</span>
+
+                            </div>
+                            <div class="col-md-12">
+                                <img class="img img-thumbnail" src="~/Content/Images/HowToPlay/step1.PNG" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 howtoplay">
+                                <b>Step 2> New Rooms: </b>
+                                <span>Join a Room where you are intrested. After the joining any room from <b class="badge">New Rooms</b>, the <b class="badge">My Room</b> section will be automatically open to play the game.</span>
+                            </div>
+                            <div class="col-md-12">
+                                <img class="img img-thumbnail" src="~/Content/Images/HowToPlay/step2.PNG" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 howtoplay">
+                                <b>Step 3> My Room: </b>
+                                <span>In this section rooms display joined by you.</span>
+                                <span>Now, Just select the your lucky number from given <b class="badge">1 to 10</b>.</span>
+                                <span>When you select the any number from <b class="badge">1 to 10</b>, the system will also give a number, According to the number difference, you will be collcted a points.</span>
+                            </div>
+                            <div class="col-md-12">
+                                <img class="img img-thumbnail" src="~/Content/Images/HowToPlay/step3.PNG" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 howtoplay">
+                                <b>Step 4> Complete you all round: </b>
+                                <span>Just complete your rounds and wait for the result.</span>
+                                <span>Result will be display after completing all round by all members</span>
+
+                            </div>
+                            <div class="col-md-12">
+                                <img class="img img-thumbnail" src="~/Content/Images/HowToPlay/step4.PNG" />
+                            </div>
+                        </div>*@
+                </div>
+                <div id="MyDetails" class="tab-pane">
+                    <div class="TopHeaderTitle">My Details</div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td>User Name</td>
+                                    <td>@CRM.Models.GlobalFunctions.GetCookies("UserName")</td>
+                                </tr>
+                                <tr>
+                                    <td>My Referal Code</td>
+                                    <td><span class="MyreferalCode"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td><span></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Date Of Birth</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender</td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Email id</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile no</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Password</td>
+                                    <td>
+                                        <span class="glyphicon glyphicon-edit"></span>
+                                        <div class="row" style="display:none">
+                                            <div class="col-md-6">Old Password</div>
+                                            <div class="col-md-6"><input type="password" id="txtoldpassword" /></div>
+
+                                            <div class="col-md-6">New Password</div>
+                                            <div class="col-md-6"><input type="password" id="txtnewpassword" /></div>
+
+                                            <div class="col-md-6">Confirm Password</div>
+                                            <div class="col-md-6"><input type="password" id="txconfirmpassword" /></div>
+                                            <div class="btn btn-sm btn-warning col-md-12">Change Password</div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="avatar-wrapper">
+                                <img class="profile-pic" src="" />
+                                <div class="upload-button">
+                                    <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+                                </div>
+                                <input class="file-upload" type="file" accept="image/*" />
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="myaccountdetails">
+                                <div class="TopHeaderTitle">Your Account Details</div>
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td>Account No</td>
+                                        <td><input type="text" value="" placeholder="Enter Account No" id="AccountNo" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>IFSC CODE</td>
+                                        <td><input type="text" value="" placeholder="IFSC Code" id="IFSCCode" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>BANK NAME</td>
+                                        <td><input type="text" value="" placeholder="Bank Name" id="BankName" /></td>
+                                    </tr>
+
+                                </table>
+                                <div class="btn btn-success" id="btnAccountdetailsSave" onclick="AccountDetails()">Save Account Details</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sounds" style="display:none">
+        <audio controls="controls" id="audio">
+            <source src="~/Content/Sounds/click1.mp3" type="audio/mpeg" />
+        </audio>
+
+    </div>
+</div>
+<!-- container -->

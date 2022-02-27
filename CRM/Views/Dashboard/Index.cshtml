@@ -1,0 +1,91 @@
+﻿@model System.Data.DataTable
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}<div class="block-header">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="~/Content/Theme/Admin/plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="~/Content/Theme/Admin/plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- JQuery DataTable Css -->
+    <link href="~/Content/Theme/Admin/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="~/Content/Theme/Admin/css/style.css" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="~/Content/Theme/Admin/css/themes/all-themes.css" rel="stylesheet" />
+</div>
+<div class="block-header">
+
+    @foreach (System.Data.DataRow row in Model.Rows)
+    {
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a href="~/Users/Index">
+                <div class="info-box bg-green hover-expand-effect">
+                    <div class="content">
+                        <div class="text">Total Users</div>
+                        <div class="number count-to" data-from="0" data-to="@row["Total Users"]" data-speed="15" data-fresh-interval="20">@row["Total Users"]</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box bg-orange hover-expand-effect">
+                <div class="content">
+                    <div class="text">User Account Balance Available</div>
+                    <div class="number count-to" data-from="0" data-to="@row["User Account Balance"]" data-speed="15" data-fresh-interval="20">Rs.@row["User Account Balance"]</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a href="~/WithdrawlRequest/Index">
+                <div class="info-box bg-brown hover-expand-effect">
+                    <div class="content">
+                        <div class="text">Withdrawl Request</div>
+                        <div class="number count-to" data-from="0" data-to="@row["Withdrawl Request"]" data-speed="15" data-fresh-interval="20">@row["Withdrawl Request"] Pending</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <a href="~/Rooms/Index">
+                <div class="info-box bg-blue hover-expand-effect">
+                    <div class="content">
+                        <div class="text">Rooms</div>
+                        <div class="number count-to" data-from="0" data-to="@row["TotalRooms"]" data-speed="15" data-fresh-interval="20">@row["TotalRooms"]</div>
+                    </div>
+                </div>
+                </a>
+       </div>
+    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="info-box bg-deep-purple hover-expand-effect">
+                <div class="content">
+                    <div class="text">Game Changing Mode</div>
+                    <div class="number count-to" data-from="0" data-to="@row["Current Number"]" data-speed="15" data-fresh-interval="20">@row["Current Number"]</div>
+                </div>
+        </div>
+    </div>
+
+        
+    }
+</div>
+
+<!-- Jquery Core Js -->
+<script src="~/Content/Theme/Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core Js -->
+<!-- Select Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<!-- Slimscroll Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- Waves Effect Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/node-waves/waves.js"></script>
+<!-- Demo Js -->
+<script src="~/Content/Theme/Admin/js/demo.js"></script>
+<!-- Custom Js -->
+<script src="~/Content/Theme/Admin/js/admin.js"></script>
+<script src="~/Content/Theme/Admin/js/pages/tables/jquery-datatable.js"></script>

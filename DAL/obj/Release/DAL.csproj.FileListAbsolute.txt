@@ -1,0 +1,5 @@
+D:\Project\Game\CRM\DAL\bin\Release\DAL.dll
+D:\Project\Game\CRM\DAL\bin\Release\DAL.pdb
+D:\Project\Game\CRM\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\Project\Game\CRM\DAL\obj\Release\DAL.dll
+D:\Project\Game\CRM\DAL\obj\Release\DAL.pdb

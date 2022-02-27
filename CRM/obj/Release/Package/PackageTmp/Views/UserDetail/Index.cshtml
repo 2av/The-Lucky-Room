@@ -1,0 +1,336 @@
+﻿@model DAL.UserDetails
+@{
+    ViewBag.Title = "Index";
+    Layout = "";
+}
+
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title>Basic Form Elements | Bootstrap Based Admin Template - Material Design</title>
+    <!-- Favicon-->
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Core Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- Waves Effect Css -->
+    <link href="~/Content/Theme/Admin/plugins/node-waves/waves.css" rel="stylesheet" />
+    <!-- Animation Css -->
+    <link href="~/Content/Theme/Admin/plugins/animate-css/animate.css" rel="stylesheet" />
+    <!-- Bootstrap Material Datetime Picker Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet" />
+    <!-- Wait Me Css -->
+    <link href="~/Content/Theme/Admin/plugins/waitme/waitMe.css" rel="stylesheet" />
+    <!-- Bootstrap Select Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <!-- Custom Css -->
+    <link href="~/Content/Theme/Admin/css/style.css" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="~/Content/Theme/Admin/css/themes/all-themes.css" rel="stylesheet" />
+
+    <style>
+        .login-page {
+            background-color: #00BCD4;
+            padding-left: 0;
+            max-width: 100%;
+            margin: 5% auto;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+
+<body class="login-page ls-closed">
+
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="preloader">
+                <div class="spinner-layer pl-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+        <div class="card">
+
+            <div class="header">
+                <h2> USER REGISTRATION PAGE</h2>
+            </div>
+
+            <div class="body">
+                <form id="wizard_with_validation" method="POST">
+                    <h3>Personal Information</h3>
+                    <fieldset>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="col-sm-6">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="txtFullName" class="form-control" name="username" required>
+                                        <label class="form-label">FullName*</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="email" id="txtemail" class="form-control" name="email" required="" aria-required="true">
+                                        <label class="form-label">Email</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="number" id="txtMobileno" class="form-control" name="number" required="" aria-required="true" maxlength="10">
+                                        <label class="form-label">Mobile No</label>
+
+                                        <div class="help-info">Numbers only</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="txtDateofBirth" class="datepicker form-control" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Please Select Date Of Birth..." data-dtp="dtp_kguKR">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-sm-6">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="txtIdentityCard" class="form-control" name="username" required>
+                                            <label class="form-label">Enter Identity Card No*</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="radio" name="gender" id="male" value="Male" checked="checked" class="with-gap">
+                                            <label for="male">Male</label>
+
+                                            <input type="radio" name="gender" id="female" value="Female" class="with-gap">
+                                            <label for="female" class="m-l-20">Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-sm-12">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <textarea name="description" id="txtAddress" cols="30" rows="3" class="form-control no-resize" required="" aria-required="true"></textarea>
+                                        <label class="form-label"> Address</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h3>Company Information</h3>
+
+                    <fieldset>
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" id="txtCompanyName" name="Comapny Name" class="form-control" required>
+                                <label class="form-label">Comapny Name*</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" id="txtRegistrationNo" name="Registration No" class="form-control" required>
+                                <label class="form-label">Registration No*</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <input type="text" id="GSTNO" name="Registration No" class="form-control" required>
+                                <label class="form-label">GST No*</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-float">
+                            <div class="form-line">
+                                <textarea name="address" id="txtComapnyaddress" cols="30" rows="3" class="form-control no-resize" required></textarea>
+                                <label class="form-label">Comapny Address*</label>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h3>OTP Verification</h3>
+                    <fieldset>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="form-group form-float">
+                                    <div class="form-line">
+                                        <input type="text" id="txtOTP" name="Comapny Name" class="form-control" required>
+                                        <label class="form-label">Enter OTP*</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <button type="button" class="btn bg-light-green waves-effect">
+                                    <i class="material-icons">trending_up</i>
+                                    <span>Re-Send OTP</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <input id="acceptTerms-2" name="acceptTerms" type="checkbox" required>
+                            <label for="acceptTerms-2">I agree with the Terms and Conditions.</label>
+
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-1"></div>
+
+
+    <!-- Jquery Core Js -->
+    <script src="~/Content/Theme/Admin/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Content/Theme/Admin/plugins/autosize/autosize.js"></script>
+    <!-- Moment Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/momentjs/moment.js"></script>
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <script src="~/Content/Theme/Admin/plugins/jquery-steps/jquery.steps.js"></script>
+    <script src="~/Content/Theme/Admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <!-- Select Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <!-- Slimscroll Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- Jquery Validation Plugin Css -->
+    <script src="~/Content/Theme/Admin/plugins/jquery-validation/jquery.validate.js"></script>
+    <!-- JQuery Steps Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/jquery-steps/jquery.steps.js"></script>
+    <!-- Sweet Alert Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/sweetalert/sweetalert.min.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+    <!-- Bootstrap Material Datetime Picker Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- Custom Js -->
+    <script src="~/Content/Theme/Admin/js/admin.js"></script>
+    <script src="~/Content/Theme/Admin/js/pages/forms/form-wizard.js"></script>
+    <!-- Demo Js -->
+    <script src="~/Content/Theme/Admin/js/demo.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/node-waves/waves.js"></script>
+    <!-- Autosize Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/autosize/autosize.js"></script>
+    <!-- Moment Plugin Js -->
+    <script src="~/Content/Theme/Admin/plugins/momentjs/moment.js"></script>
+    <!-- Custom Js -->
+    <script src="~/Content/Theme/Admin/js/admin.js"></script>
+    <script src="~/Content/Theme/Admin/js/pages/forms/basic-form-elements.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            debugger;
+            $(".waves-effect").click(function () {
+
+                if ($("#txtFullName").val() == "" || $("#txtemail").val() == "" || $("#txtMobileno").val() == ""
+                    || $("#txtAddress").val() == "" || $("#txtCompanyName").val() == "" || $("#txtRegistrationNo").val() == "" ||
+                    $("#GSTNO").val() == "" || $("#txtComapnyaddress").val() == "") {
+                    return false;
+                }
+                var Gender = $('input[name=gender]:checked').val();
+
+                var strdate = $("#txtDateofBirth").val();
+                strdate = strdate.substr(strdate.indexOf(' ') + 1)
+
+                var UserDetails = {
+                 FullName : $("#txtFullName").val(),
+                 EmailID : $("#txtemail").val(),
+                 MobileNo : $("#txtMobileno").val(),
+                 DateOfBirth : strdate,
+                 UserIdentity : $("#txtIdentityCard").val(),
+                 Gender : Gender,
+                 Address: $("#txtAddress").val(),
+
+                 CompanyName : $("#txtCompanyName").val(),
+                 RegistrationNo : $("#txtRegistrationNo").val(),
+                 GSTNO : $("#GSTNO").val(),
+                 Companyaddress : $("#txtComapnyaddress").val()
+                };
+                //alert(JSON.stringify(UserDetails));
+
+                $.ajax({
+                    type: "POST",
+                    url: "/UserDetail/Create",
+                    data: JSON.stringify(UserDetails),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        if (data == "Insrted Successfully")
+                        {
+                            alert("UserDetails has been Save Successfully.!");
+                             $("#txtFullName").val(''),
+                             $("#txtemail").val(''),
+                             $("#txtMobileno").val(''),
+                             $("#txtDateofBirth").val('')
+                             $("#txtIdentityCard").val(''),
+                            $("#txtAddress").val(''),
+                            $("#txtCompanyName").val(''),
+                            $("#txtRegistrationNo").val(''),
+                            $("#GSTNO").val(''),
+                            $("#txtComapnyaddress").val('')
+                        }
+                        if (data == "Record Exists") {
+                            alert("User MobileNo has been Alraedy Exists.!");
+
+                        }
+
+                    }
+                });
+            })
+
+        });
+    </script>
+
+
+
+</body>
+</html>

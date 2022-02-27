@@ -1,0 +1,727 @@
+﻿#exTab1 .tab-content {
+    color: black;
+    /*background-color: white;*/
+    padding: 5px 15px;
+}
+
+#exTab2 h3 {
+    color: white;
+    /*background-color: #428bca;*/
+    padding: 5px 15px;
+}
+
+/* remove border radius for the tab */
+
+#exTab1 .nav-pills > li > a {
+    border-radius: 0;
+}
+
+/* change border radius for the tab , apply corners on top*/
+
+#exTab3 .nav-pills > li > a {
+    border-radius: 4px 4px 0 0;
+}
+
+#exTab3 .tab-content {
+    color: white;
+    /*background-color: #428bca;*/
+    padding: 5px 15px;
+}
+
+.RoomsArea {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #690000;
+    border-radius: 1px;
+    margin-top: 10px;
+    background-color: #ffffeb;
+    box-shadow: 1px 1px 4px #020102;
+    font-size:1.2rem;
+}
+
+    .RoomsArea .description {
+        margin-top: 1rem;
+    }
+    .RoomsArea .description .badge{
+
+    }
+.toparea {
+    position: fixed;
+    top: 100px;
+    background-color: #3f3f3f;
+    z-index: 1000;
+    left: 0;
+    width: 100%;
+}
+
+    .toparea .nav {
+        font-size: 1.4rem;
+    }
+
+.myroomarea {
+    padding: 10px;
+    margin-top: 1px;
+    border: 1px gray solid;
+    text-align: center;
+}
+
+.logout {
+    width: 51px;
+    height: 84px;
+}
+
+    .logout span {
+        font-size: 19px;
+        color: black;
+    }
+
+.luckbtn {
+    margin: 1px;
+}
+.roatenumber{
+    -webkit-animation: rotation 0.1s infinite linear !important;
+}
+.luckybtn_1{
+    background-image:url(../Images/Number/1.png);
+}
+.luckybtn_2{
+    background-image:url(../Images/Number/2.png);
+}
+.luckybtn_3{
+    background-image:url(../Images/Number/3.png);
+}
+.luckybtn_4{
+    background-image:url(../Images/Number/4.png);
+}
+.luckybtn_5{
+    background-image:url(../Images/Number/5.png);
+}
+.luckybtn_6{
+    background-image:url(../Images/Number/6.png);
+}
+.luckybtn_7{
+    background-image:url(../Images/Number/7.png);
+}
+.luckybtn_8{
+    background-image:url(../Images/Number/8.png);
+        background-size: 175% 152% !important;
+}
+.luckybtn_9{
+    background-image:url(../Images/Number/9.png);
+}
+.luckybtn_10{
+    background-image:url(../Images/Number/10.png);
+    background-size: 148% 142% !important;
+    background-position: 359% 45% !important;
+}
+.paymentoption {
+    width: 200px;
+}
+
+.loader-area {
+    position: fixed;
+    top: 142px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 200000;
+    background-color: white;
+    left: 0;
+    padding-top: 150px;
+    display: none;
+}
+
+.nav .nav-pills li a {
+    color: black;
+}
+
+.RoundCompleted {
+    font-size: 1rem;
+}
+
+.TopHeaderTitle {
+    text-align: center;
+    width: 100%;
+    font-size: larger;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+    margin-bottom: 15px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #fff;
+    background-color: #151919;
+}
+
+.amountinuse, .profitamount {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: blue;
+}
+
+.withdrawrequest input {
+    border: 0px;
+    text-align: center;
+}
+
+.pendingwithdraw-request {
+    text-align: center;
+}
+
+.withdraw-history {
+    text-align: center;
+}
+
+.howtoplay b {
+    color: brown;
+}
+/*----------------------
+    --------*/
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+    .panel-title > a {
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+    }
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+
+body {
+    font-size: 1.3rem;
+   
+}
+body,.container,.tab-content,.tab-pane{
+     background-color:#fdffff;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+/*Notification */
+.notification {
+    position: relative;
+}
+
+.notificationCount {
+    position: absolute;
+    top: -2px;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: black;
+}
+
+.btnNotificationMarkAsView {
+}
+
+.IsViewFalse {
+    font-weight: bold;
+}
+
+.ulNotification .Error {
+    color: red;
+}
+
+.ulNotification .Normal {
+    color: blue;
+}
+
+.ulNotification .Success {
+    color: green;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 110%;
+    background-color: #f3ffee;
+    color: black;
+    text-align: center;
+    height: 40px;
+    border-top: 1px solid black;
+    z-index: 111;
+}
+
+    .footer .referalarea {
+        width: 100%;
+        line-height: 1;
+    }
+
+.glyphicon {
+    color: white;
+}
+
+.glyphicon-refresh {
+    cursor: pointer;
+}
+
+.pendingmembers {
+    font-size: 1.1rem;
+    color: darkred;
+}
+
+.blinking {
+    animation: blinkingText 3s infinite;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: green;
+    }
+
+    49% {
+        color: green;
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: green;
+    }
+}
+
+.whatsapp {
+    width: 23px;
+}
+
+.MyReferelcode {
+    font-weight: bold;
+    color: #2117aa;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 8px;
+    color: #4bff00;
+}
+
+.balance-area .badge {
+    background-color: #271d1d;
+}
+
+.badge {
+    background-color: #919191;
+    color: white;
+}
+
+.maintoparea {
+    text-align: center;
+    position: fixed;
+    z-index: 1000;
+    /*background-color: #91ff00;*/
+    top: 0;
+    left: 0;
+    width: 105%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    /*background: linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 57%,
+      #423246 100%
+    ),
+    linear-gradient(
+      -45deg,
+      #8f5046 0%,
+      #a14436 0.3%,
+      #4c2556 112%,
+      transparent 11%
+    ),
+    linear-gradient(-90deg, #a14436 100%, #a14436 65%, transparent 20%);*/
+    color: white;
+    font-size: 1rem;
+    /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+    background:-webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff);
+
+    background-size: 400% 400%;
+    background-position: 36% 63%;
+    /* animation: gradient 15s ease infinite;*/
+}
+
+    .maintoparea .glyphicon {
+        color: white;
+    }
+    .glyphicon-off{
+        color:crimson;
+    }
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.label {
+    color: #7b0000;
+}
+.playbtn{
+    position:relative;
+}
+.playbtn .luckbtn {
+    box-shadow: 0px 0px 10px 5px #91ff00;
+    animation: glow 1.5s linear infinite alternate;
+    border-radius: 50%;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    font-weight: bold;
+    font-size: medium;
+    line-height: 3rem;
+    border: solid;
+    color: black;
+    background-position: 292% 45%;
+    background-size: 170% 152%;
+    
+}
+
+@keyframes glow {
+    to {
+        box-shadow: 0px 0px 10px 5px white;
+    }
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+.RoomGeneratedDateTime {
+}
+
+.lastupdateon {
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 12px;
+    background-color: white;
+}
+
+.onlineuser-area {
+    position: absolute;
+    width: 30%;
+    border: 1px solid;
+    right: 0;
+    bottom: 21px;
+    background-color: white;
+    text-align: left;
+    overflow-y: auto;
+    padding-left: 2px;
+    box-shadow: inset -5px 0px 0px 2px maroon;
+    transition: 0.3s all;
+}
+
+.onlineuser-area-hide {
+    height: 26px !important;
+}
+
+.onlineuser-area-show {
+    height: 200px !important;
+}
+
+.onlineuser-count {
+    background-color: #690000;
+    display: block;
+    color: white;
+    padding: 1px;
+    margin-left: -2px;
+}
+
+.img-profileicon {
+    width: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 18px;
+    padding: 2px;
+}
+
+.user-list label{
+    color:black;
+}
+.Roundplaycount {
+    color: maroon;
+    font-size: 1rem;
+}
+
+.mycurrentscore {
+    margin: 2px;
+    border: 1px solid maroon;
+    padding: 3px;
+    background-color: gold;
+    color: blue;
+}
+
+.Roomcount {
+    font-size: 1rem;
+}
+.top{
+    margin-top:-8px;
+    margin-left:-11px;
+    text-align:left !important;
+    
+}
+
+.top .label{
+    border:1px solid black;
+    border-radius:0px;
+    font-size:13px;
+}
+
+.SideMenu {
+    position: fixed;
+    right: 0px;
+}
+.Notificationdetails{
+    font-size:1.3rem;
+}
+.btnAddAmount{
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    margin-top: 5px;
+    border: 1px solid #3f3f3f;
+    background-color: #3f3f3f;
+}
+.btnpaymentapply{
+    Color: #fff;
+    background-color: #FF5722;
+    border-color: #000000;
+}
+
+.user-name-det {
+    margin-bottom: 3px;
+    letter-spacing: 0.6px;
+}
+.badge {
+    padding: 3px 7px 6px !important;
+}
+.blank-room
+{
+    padding: 10px;
+    background: #f1f1f1;
+    border-radius: 15px;
+    line-height: 2;
+    text-align: center;        
+}
+.h4-txt
+{
+    font-weight:800;
+}
+.h4-txt1
+{
+    font-weight:600;
+    text-transform:uppercase;
+}
+.h4-txt2 {
+    font-weight: 800;
+    text-decoration: underline;
+}
+.withdraw {
+    background: #ececec;
+    padding: 15px;
+    border-radius: 14px;
+}
+.btn-withdraw-request {
+    background-color: #151919;
+    padding: 3px 13px !important;
+    color: white;
+    font-size: 14px;
+    border-color: #151919;
+    margin: 1px;
+}
+
+.joinedRoomRefresh{
+    color:blue;
+}
+input[type=checkbox] + label {
+  display: inline;
+  margin: 0.2em;
+  cursor: pointer;
+  padding: 0.2em;
+  font-size:0.8em;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+  content: "\2714";
+  border: 0.1em solid #000;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+  line-height:1;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+
+input[type=checkbox]:disabled + label:before {
+  transform: scale(1);
+  border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled + label:before {
+  transform: scale(1);
+  background-color: #bfb;
+  border-color: #bfb;
+}
+.filter{
+    display: -webkit-inline-box;
+}
+
+.playbtn .btnloader-main{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 10px;
+    opacity: 0.1;
+    background-color: red;
+}
+.btnloader-main .btnloader{
+    font-size: 20px;
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 30px auto;
+    border-radius: .5em;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 0 0 0.05em rgba(100,100,100,0.075), 0 0 0 0.25em rgba(0,0,0,0.1), inset 0 0.1em 0.05em rgba(0,0,0,0.1), 0 0.05em rgba(255,255,255,0.7);
+    display:none;
+}
+.btnloader .bar {
+	/* Size and position */
+    font-size: 20px; /* 1em */
+    width: 10em;
+    height: 1em;
+    position: relative;
+    margin: 100px auto;
+
+    /* Styles */
+    border-radius: .5em; /* Height/2 */
+    background: white; /* Fallback */
+    background: rgba(255,255,255,0.6);
+    box-shadow: 
+        0 0 0 .05em rgba(100,100,100,0.075), /* Subtle border */
+        0 0 0 .25em rgba(0,0,0,0.1),		   /* Outter border */
+        inset 0 .1em .05em rgba(0,0,0,0.1),   /* Inset shadow */
+        0 .05em rgba(255,255,255,0.7);	   /* Slight reflection */
+}
+.btnloader:after {
+	/* Content and position */
+    content: "Please wait.";
+    position: absolute;
+    left: 25%;
+    top: 150%;
+
+    /* Font styles */
+    font-family: 'Carrois Gothic', sans-serif;
+    font-size: 1em;
+    color: #555;
+    text-shadow: 0 .05em rgba(255,255,255,0.7);
+}
+.btnloader .sphere {
+    /* Size */
+    display: block;
+    width: 1em;
+    height: 100%;
+    
+    /* Styles */
+    border-radius: 50%;
+    background: linear-gradient(#eee, #ddd);
+    box-shadow:
+        inset 0 .15em .1em rgba(255,255,255,0.3), /* Top light */
+        inset 0 -.1em .15em rgba(0,0,0,0.15),	   /* Bottom shadow */
+        0 0 .25em rgba(0,0,0,0.3);			   /* Outter shadow */
+
+    /* Animation */
+    animation: move 1.75s ease-in-out infinite alternate;
+}
+@keyframes move {
+    to { margin-left: 90%; }
+}
+
+.totalpointsarea {
+    position: absolute;
+    font-size: 1rem;
+    top: 0;
+    left: 7px;
+    background-color: #aae4fe;
+    text-indent: 1px;
+    color: #151919;
+    padding: 2px 7px 2px !important;
+}
+
+
+/*-----------------------------------------------------------------------------------*/

@@ -1,0 +1,242 @@
+﻿@model DAL.Rooms
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="block-header">
+    <!-- Colorpicker Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet" />
+    <!-- Dropzone Css -->
+    <link href="~/Content/Theme/Admin/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <!-- Multi Select Css -->
+    <link href="~/Content/Theme/Admin/plugins/multi-select/css/multi-select.css" rel="stylesheet">
+    <!-- Bootstrap Spinner Css -->
+    <link href="~/Content/Theme/Admin/plugins/jquery-spinner/css/bootstrap-spinner.css" rel="stylesheet">
+    <!-- Bootstrap Tagsinput Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet">
+    <!-- Bootstrap Select Css -->
+    <link href="~/Content/Theme/Admin/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
+    <!-- noUISlider Css -->
+    @*<link href="~/Content/Theme/Admin/plugins/nouislider/nouislider.min.css" rel="stylesheet" />*@
+    <!-- Custom Css -->
+    <link href="~/Content/Theme/Admin/css/style.css" rel="stylesheet">
+    <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
+    <link href="~/Content/Theme/Admin/css/themes/all-themes.css" rel="stylesheet" />
+</div>
+<div class="block-header">
+    <h2>
+        New Room
+        @*<small>Taken from <a href="https://datatables.net/" target="_blank">datatables.net</a></small>*@
+    </h2>
+</div>
+<!-- Inline Layout | With Floating Label -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    Add New
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="~/Rooms/Index">View Rooms</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="body">
+                @using (Html.BeginForm())
+                {
+
+
+                    <div class="row clearfix">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.HiddenFor(m=>m.ID)
+                                    @Html.TextBoxFor(m => m.RoomName, new { @class = "form-control" })
+                                    <label class="form-label">Room Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.EntryPrice, new { @class = "form-control" })
+                                    <label class="form-label">Entry Price <span class="PriceDistribute"></span></label>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.MembersNo, new { @class = "form-control" })
+                                    <label class="form-label">Members No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.Description, new { @class = "form-control" })
+                                    <label class="form-label">Description</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.FirstPrice, new { @class = "form-control price" })
+                                    <label class="form-label">First Price</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.SecondPrice, new { @class = "form-control price" })
+                                    <label class="form-label">Second Price</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.ThirdPrice, new { @class = "form-control price" })
+                                    <label class="form-label">Third Price</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.FourthPrice, new { @class = "form-control price" })
+                                    <label class="form-label">Fourth Price</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.FifthPrice, new { @class = "form-control price" })
+                                    <label class="form-label">FifthPrice</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    @Html.TextBoxFor(m => m.RoundPlay, new { @class = "form-control" })
+                                    <label class="form-label">Round Play</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn btn-sm btn-success" onclick="SaveData()">Save</div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Inline Layout | With Floating Label -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="~/scripts/CommonScripts.js"></script>
+<!-- Jquery Core Js -->
+
+<script>
+    $(document).ready(function () {
+        $(".price").keyup(function () {
+            var price = 0;
+            $(".price").each(function (i, v) {
+                var val = parseFloat($(v).val());
+                if (!isNaN(val)) {
+                    price += parseFloat($(v).val());
+                }
+
+            });
+            var html = "";
+            if (price > 0) {
+                html = "Price distibuted: "+price;
+            }
+            $(".PriceDistribute").html(html);
+        });
+    });
+    function SaveData() {
+        var ID = $("#ID").val().trim();
+        var RoomName = $("#RoomName").val().trim();
+        var EntryPrice = $("#EntryPrice").val().trim();
+        var MembersNo = $("#MembersNo").val().trim();
+        var Description = $("#Description").val().trim();
+        var FirstPrice = $("#FirstPrice").val().trim();
+        var SecondPrice = $("#SecondPrice").val().trim();
+        var ThirdPrice = $("#ThirdPrice").val().trim();
+        var FourthPrice = $("#FourthPrice").val().trim();
+        var FifthPrice = $("#FifthPrice").val().trim();
+        var RoundPlay = $("#RoundPlay").val().trim();
+        
+        var data = {
+            ID:ID,
+            RoomName: RoomName,
+            EntryPrice: EntryPrice,
+            MembersNo :MembersNo,
+            Description:Description,
+            FirstPrice :FirstPrice ,
+            SecondPrice:SecondPrice,
+            ThirdPrice :ThirdPrice ,
+            FourthPrice:FourthPrice,
+            FifthPrice: FifthPrice,
+            RoundPlay: RoundPlay
+        }
+        $.ajax({
+            type: "POST",
+            url: "/Rooms/SaveData",
+            data: JSON.stringify(data),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                alert(data);
+                location.href = "/Rooms/Index";
+            }
+        });
+
+    }
+</script>
+
+<script src="~/Content/Theme/Admin/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core Js -->
+<script src="~/Content/Theme/Admin/plugins/bootstrap/js/bootstrap.js"></script>
+<!-- Select Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/bootstrap-select/js/bootstrap-select.js"></script>
+<!-- Slimscroll Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+<!-- Bootstrap Colorpicker Js -->
+<script src="~/Content/Theme/Admin/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<!-- Dropzone Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/dropzone/dropzone.js"></script>
+<!-- Input Mask Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+<!-- Multi Select Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/multi-select/js/jquery.multi-select.js"></script>
+<!-- Jquery Spinner Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/jquery-spinner/js/jquery.spinner.js"></script>
+<!-- Bootstrap Tags Input Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<!-- noUISlider Plugin Js -->
+@*<script src="~/Content/Theme/Admin/plugins/nouislider/nouislider.js"></script>*@
+<!-- Waves Effect Plugin Js -->
+<script src="~/Content/Theme/Admin/plugins/node-waves/waves.js"></script>
+<!-- Custom Js -->
+<script src="~/Content/Theme/Admin/js/admin.js"></script>
+<script src="~/Content/Theme/Admin/js/pages/forms/advanced-form-elements.js"></script>
+<!-- Demo Js -->
+<script src="~/Content/Theme/Admin/js/demo.js"></script>
+

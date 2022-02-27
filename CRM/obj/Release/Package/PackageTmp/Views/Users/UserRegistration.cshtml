@@ -1,0 +1,141 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UserRegistration</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/js/Validation.js"></script>
+    <script>
+    var IsUserExists = false;
+    var IsReferalExists = false;
+    function checkUserExists() {
+        var UserName = $("#username").val().trim();
+        if (UserName != "") {
+            $.ajax({
+                type: "POST",
+                url: "/Users/checkUserExists",
+                data: JSON.stringify({ UserName: UserName }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#msg").html(data);
+                    if (data == 'User Available') {
+                        IsUserExists = true;
+                        $("#msg").css("color", "green");
+                    }
+                    else {
+                        IsUserExists = false;
+                        $("#msg").css("color", "red");
+                    }
+
+                }
+            });
+        }
+    }
+    function checkReferalCode() {
+        var RefferedBy = $("#RefferedBy").val().trim();
+        if (RefferedBy != "") {
+            $.ajax({
+                type: "POST",
+                url: "/Users/checkReferalCode",
+                data: JSON.stringify({ RefferedBy: RefferedBy }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (data) {
+                    $("#msgreferal").html(data);
+                    if (data == 'Referal Code Not Available') {
+                        IsReferalExists = false;
+                        $("#msgreferal").css("color", "red");
+                    }
+                    else {
+                        IsReferalExists = true;
+                        $("#msgreferal").css("color", "green");
+                    }
+
+                }
+            });
+        }
+    }
+    function SaveData(){
+        if (IsUserExists) {
+            var UserName = $("#username").val().trim();
+            var FirstName = $("#name").val().trim();
+            var EmailId = $("#EmailId").val().trim();
+            var Password = $("#Password").val().trim();
+            var RefferedBy = $("#RefferedBy").val().trim();
+            if (IsReferalExists == false) {
+                RefferedBy = '';
+            }
+            if(!ValidateEmail(EmailId)){
+                alert("Invalid Email Id");
+                return;
+            }
+            if (UserName != "" && FirstName != "" && EmailId != "" && Password != '') {
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Users/SaveData",
+                    data: JSON.stringify({ UserName: UserName, FirstName: FirstName, EmailId: EmailId, Password: Password, RefferedBy: RefferedBy }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (data) {
+                        alert(data);
+
+                    }
+                });
+            }
+        }
+        else {
+            alert("User not Exists");
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="center">Lucky Money- New User Registration</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6">User Name</div>
+            <div class="col-md-6">
+                <input type="text" id="username" onblur="checkUserExists()"/>
+                <p id="msg"></p>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">Name</div>
+            <div class="col-md-6"><input type="text" id="name" /></div>
+        </div> 
+        <div class="row">
+            <div class="col-md-6">Email Id</div>
+            <div class="col-md-6"><input type="text" id="EmailId" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Password</div>
+            <div class="col-md-6"><input type="text" id="Password" /></div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Referal Code</div>
+            <div class="col-md-6">
+                <input type="text" id="RefferedBy" onblur="checkReferalCode()"/>
+                <p id="msgreferal"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6"><button onclick="SaveData()">Register</button></div>
+        </div> 
+    </div>
+</body>
+
+</html>

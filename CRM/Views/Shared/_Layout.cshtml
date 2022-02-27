@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/UserDashboard.css?v12" rel="stylesheet"  type="text/css"/>
+    <script type="text/javascript" src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="~/Content/bootbox/bootbox.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/UserDashboard.js?v13"></script>
+    
+    <style>
+        body {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row maintoparea">
+            <span class="badge totalpointsarea" >
+                Points Collected: <span class="CollectedPoints">0</span>
+            <span class="glyphicon glyphicon-gift" style="color: red;font-weight: bold; cursor:pointer" onclick="AddPointsCollected()"></span>
+            </span>
+            @*<div class="lastupdateon"></div>*@
+            <div style="text-align:center;width:100%;margin-top:-8px">
+                <h4>
+                    @if (CRM.Models.GlobalFunctions.GetCookie("UserName") == "Admin")
+                    {
+                        <a href="/Dashboard/Index"><span class="glyphicon glyphicon-collapse-up" style="font-size:1.8rem;color:red"></span></a>
+                    }
+                    &nbsp;THE LUCKY ROOM <span class="logout"><a href="/Users/Login"><span class="glyphicon glyphicon-off"></span></a></span>
+                </h4>
+            </div>
+
+            <div class="col-md-12 user-name-det">
+                <span>
+                    <a href="#MyDetails" data-toggle="tab"  onclick="GetAccountDetails()" ><span class="glyphicon glyphicon-edit"></span></a>&nbsp;&nbsp;
+                    <span class="glyphicon glyphicon-user"></span>&nbsp;
+                    <span class="user-name">@CRM.Models.GlobalFunctions.GetCookie("UserName")</span>
+                    <span class="MyreferalCode"></span>
+                    &nbsp;&nbsp;<a href="/UserDashBoard/index"><span class="glyphicon glyphicon-refresh"></span></a>
+                </span>
+            </div>
+            <div class="col-md-12">
+                <span class="balance-area" style="text-align:center">
+                    <span class="badge">
+                        <span class="accountbalance">...</span>
+
+                        &nbsp;<a href="#transaction" data-toggle="tab" class=""><span class="glyphicon glyphicon-plus-sign" style="font-size: larger;
+                        color: #dedeff;"></span></a>
+                    </span>
+                    &nbsp;<span class="badge"><span class="glyphicon glyphicon-share"></span>&nbsp;<span class="TotalRefered"></span></span>
+                    @*&nbsp;<span class="badge"><span class="glyphicon glyphicon-heart"></span>&nbsp;<span class="Totallife">0</span></span>*@
+                    @*<span class="badge">...</span>*@
+                    <a href="#Notificationdetails" data-toggle="tab" id="notification">
+                        <span class="glyphicon glyphicon-bell"></span>
+                        <span class="notificationCount">0</span>
+                    </a>
+                </span>
+            </div>
+            
+        </div>
+        <div style="top:25px;">
+            <hr />
+            @RenderBody()
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="row footer" style="height:47px;">
+            <div class="referalarea" style="width:100%;">
+                <marquee style="margin-top:1px">
+                    <span class="badge" style="background-color:maroon">Refer to your freinds and earn 10% commision of entry price on every winner of your freinds.</span>
+                    <span class="badge" style="color: #eaeaea;position: absolute;background-color: darkgreen;">Get Rs.5 commission on every new joining when they add first amount in our wallet.............</span>
+                    
+                    @*<span class="badge">Vivek Mishra motivational speaker <a href="https://www.youtube.com/channel/UC1ArJeMi88gG5UL5Ventfqg" target="_blank" title="Vivek Mishra motivational speaker">click here to watch</a></span>*@
+                </marquee>
+
+                <span>
+                    Share on
+                    <img class="whatsapp sharesocial" src="~/Content/Images/social/whatsapp.jpg" onclick="shareonWhatsapp()" /> &nbsp;
+                    @*<a href="#Howtouse" data-toggle="tab">How to play</a> &nbsp;*@
+                </span>
+            </div>
+            <div class="onlineuser-area onlineuser-area-hide" onclick="onlineuserarea()" style="width:35%;"></div>
+        </div>
+        <div class="SideMenu">
+            <div class="menuitem whatsapp-icon"></div>
+            <div class="menuitem online-users"></div>
+        </div>
+    </div>
+    <div class="loader-area">
+        <span class="glyphicon glyphicon-hourglass"></span>
+        <p class="loader">Please Wait</p>
+        <p class="loader">Loading.....</p>
+    </div>
+    
+</body>
+</html>

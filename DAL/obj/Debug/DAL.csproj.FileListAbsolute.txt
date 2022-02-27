@@ -1,0 +1,15 @@
+E:\Project\CRM\DAL\bin\Debug\DAL.dll
+E:\Project\CRM\DAL\bin\Debug\DAL.pdb
+E:\Project\CRM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Project\CRM\DAL\obj\Debug\DAL.dll
+E:\Project\CRM\DAL\obj\Debug\DAL.pdb
+D:\Project\Game\CRM\DAL\bin\Debug\DAL.dll
+D:\Project\Game\CRM\DAL\bin\Debug\DAL.pdb
+D:\Project\Game\CRM\DAL\obj\Debug\DAL.dll
+D:\Project\Game\CRM\DAL\obj\Debug\DAL.pdb
+D:\Project\Game\CRM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Client Project\The Lucky Room\CRM\DAL\bin\Debug\DAL.dll
+D:\Client Project\The Lucky Room\CRM\DAL\bin\Debug\DAL.pdb
+D:\Client Project\The Lucky Room\CRM\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Client Project\The Lucky Room\CRM\DAL\obj\Debug\DAL.dll
+D:\Client Project\The Lucky Room\CRM\DAL\obj\Debug\DAL.pdb

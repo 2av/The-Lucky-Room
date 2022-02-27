@@ -1,0 +1,181 @@
+E:\Project\CRM\CRM\bin\ApplicationInsights.config
+E:\Project\CRM\CRM\bin\roslyn\csc.exe
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project\CRM\CRM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project\CRM\CRM\bin\roslyn\System.Collections.Immutable.dll
+E:\Project\CRM\CRM\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project\CRM\CRM\bin\roslyn\vbc.exe
+E:\Project\CRM\CRM\bin\roslyn\VBCSCompiler.exe
+E:\Project\CRM\CRM\bin\roslyn\VBCSCompiler.exe.config
+E:\Project\CRM\CRM\bin\CRM.dll.config
+E:\Project\CRM\CRM\bin\CRM.dll
+E:\Project\CRM\CRM\bin\CRM.pdb
+E:\Project\CRM\CRM\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.Web.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.WindowsServer.dll
+E:\Project\CRM\CRM\bin\Microsoft.ApplicationInsights.dll
+E:\Project\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+E:\Project\CRM\CRM\bin\System.Web.Helpers.dll
+E:\Project\CRM\CRM\bin\System.Web.Mvc.dll
+E:\Project\CRM\CRM\bin\System.Web.Razor.dll
+E:\Project\CRM\CRM\bin\System.Web.Webpages.Deployment.dll
+E:\Project\CRM\CRM\bin\System.Web.Webpages.dll
+E:\Project\CRM\CRM\bin\System.Web.Webpages.Razor.dll
+E:\Project\CRM\CRM\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project\CRM\CRM\bin\Microsoft.AI.Web.xml
+E:\Project\CRM\CRM\bin\Microsoft.AI.WindowsServer.xml
+E:\Project\CRM\CRM\bin\Microsoft.ApplicationInsights.xml
+E:\Project\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project\CRM\CRM\bin\System.Web.Razor.xml
+E:\Project\CRM\CRM\bin\System.Web.Webpages.xml
+E:\Project\CRM\CRM\bin\System.Web.Webpages.Deployment.xml
+E:\Project\CRM\CRM\bin\System.Web.Webpages.Razor.xml
+E:\Project\CRM\CRM\bin\System.Web.Helpers.xml
+E:\Project\CRM\CRM\bin\System.Web.Mvc.xml
+E:\Project\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+E:\Project\CRM\CRM\obj\Debug\CRM.dll
+E:\Project\CRM\CRM\obj\Debug\CRM.pdb
+E:\Project\CRM\CRM\bin\DAL.dll
+E:\Project\CRM\CRM\bin\DAL.pdb
+E:\Project\CRM\CRM\bin\Antlr3.Runtime.dll
+E:\Project\CRM\CRM\bin\Newtonsoft.Json.dll
+E:\Project\CRM\CRM\bin\System.Web.Optimization.dll
+E:\Project\CRM\CRM\bin\WebGrease.dll
+E:\Project\CRM\CRM\bin\Antlr3.Runtime.pdb
+E:\Project\CRM\CRM\bin\Newtonsoft.Json.xml
+E:\Project\CRM\CRM\bin\System.Web.Optimization.xml
+D:\Project\Game\CRM\CRM\bin\ApplicationInsights.config
+D:\Project\Game\CRM\CRM\bin\roslyn\csc.exe
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Project\Game\CRM\CRM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Project\Game\CRM\CRM\bin\roslyn\System.Collections.Immutable.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\System.Reflection.Metadata.dll
+D:\Project\Game\CRM\CRM\bin\roslyn\vbc.exe
+D:\Project\Game\CRM\CRM\bin\roslyn\VBCSCompiler.exe
+D:\Project\Game\CRM\CRM\bin\roslyn\VBCSCompiler.exe.config
+D:\Project\Game\CRM\CRM\bin\CRM.dll.config
+D:\Project\Game\CRM\CRM\bin\CRM.dll
+D:\Project\Game\CRM\CRM\bin\CRM.pdb
+D:\Project\Game\CRM\CRM\bin\Antlr3.Runtime.dll
+D:\Project\Game\CRM\CRM\bin\DAL.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.DependencyCollector.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.Web.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.WindowsServer.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.ApplicationInsights.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.Security.dll
+D:\Project\Game\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Project\Game\CRM\CRM\bin\Newtonsoft.Json.dll
+D:\Project\Game\CRM\CRM\bin\Owin.dll
+D:\Project\Game\CRM\CRM\bin\paytm.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Helpers.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Mvc.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Optimization.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Razor.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.Deployment.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.dll
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.Razor.dll
+D:\Project\Game\CRM\CRM\bin\WebGrease.dll
+D:\Project\Game\CRM\CRM\bin\DAL.pdb
+D:\Project\Game\CRM\CRM\bin\Antlr3.Runtime.pdb
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.DependencyCollector.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.Web.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.AI.WindowsServer.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.ApplicationInsights.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Project\Game\CRM\CRM\bin\Microsoft.Owin.Security.xml
+D:\Project\Game\CRM\CRM\bin\Newtonsoft.Json.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Optimization.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Razor.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.Deployment.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Webpages.Razor.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Helpers.xml
+D:\Project\Game\CRM\CRM\bin\System.Web.Mvc.xml
+D:\Project\Game\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+D:\Project\Game\CRM\CRM\obj\Debug\CRM.dll
+D:\Project\Game\CRM\CRM\obj\Debug\CRM.pdb
+D:\Client Project\The Lucky Room\CRM\CRM\obj\Debug\CRM.csprojResolveAssemblyReference.cache
+D:\Client Project\The Lucky Room\CRM\CRM\obj\Debug\CRM.dll
+D:\Client Project\The Lucky Room\CRM\CRM\obj\Debug\CRM.pdb
+D:\Client Project\The Lucky Room\CRM\CRM\bin\ApplicationInsights.config
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\csc.exe
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\System.Collections.Immutable.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\System.Reflection.Metadata.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\vbc.exe
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\VBCSCompiler.exe
+D:\Client Project\The Lucky Room\CRM\CRM\bin\roslyn\VBCSCompiler.exe.config
+D:\Client Project\The Lucky Room\CRM\CRM\bin\CRM.dll.config
+D:\Client Project\The Lucky Room\CRM\CRM\bin\CRM.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\CRM.pdb
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Antlr3.Runtime.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\DAL.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.DependencyCollector.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.Web.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.WindowsServer.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.ApplicationInsights.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.Security.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Web.Infrastructure.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Newtonsoft.Json.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Owin.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\paytm.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Helpers.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Mvc.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Optimization.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Razor.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.Deployment.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.Razor.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\WebGrease.dll
+D:\Client Project\The Lucky Room\CRM\CRM\bin\DAL.pdb
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Antlr3.Runtime.pdb
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.DependencyCollector.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.Web.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.AI.WindowsServer.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.ApplicationInsights.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Microsoft.Owin.Security.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\Newtonsoft.Json.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Optimization.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Razor.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.Deployment.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Webpages.Razor.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Helpers.xml
+D:\Client Project\The Lucky Room\CRM\CRM\bin\System.Web.Mvc.xml
